@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CallCenter xmlns="http://soap.sforce.com/2006/04/metadata">
+    <adapterUrl>https://app.calltrackingmetrics.com/phoneapp/salesforce_lightning?inline_phone=true</adapterUrl>
+    <customSettings>{&quot;reqSoftphoneHeight&quot;:650,&quot;reqSoftphoneWidth&quot;:450,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSalesforceCompatibilityMode&quot;:&quot;Lightning&quot;}</customSettings>
+    <displayName>CallTrackingMetrics Lightning</displayName>
+    <displayNameLabel>Display Name</displayNameLabel>
+    <internalNameLabel>Internal Name</internalNameLabel>
+    <sections>
+        <items>
+            <label>Description</label>
+            <name>reqDescription</name>
+            <value>CallTrackingMetrics Lightning</value>
+        </items>
+        <items>
+            <label>Internal Name</label>
+            <name>reqInternalName</name>
+            <value>CallTrackingMetricsLightning</value>
+        </items>
+        <items>
+            <label>CTI Adapter 2.0 URL</label>
+            <name>reqAdapterUrl</name>
+            <value>https://app.calltrackingmetrics.com/phoneapp/salesforce_lightning?inline_phone=true</value>
+        </items>
+        <items>
+            <label>CTI Adapter URL Type</label>
+            <name>reqSalesforceCompatibilityMode</name>
+            <value>Lightning</value>
+        </items>
+        <items>
+            <label>Use CTI API</label>
+            <name>reqUseApi</name>
+            <value>true</value>
+        </items>
+        <items>
+            <label>Softphone Height</label>
+            <name>reqSoftphoneHeight</name>
+            <value>650</value>
+        </items>
+        <items>
+            <label>Softphone Width</label>
+            <name>reqSoftphoneWidth</name>
+            <value>450</value>
+        </items>
+        <label>General Information</label>
+        <name>reqGeneralInfo</name>
+    </sections>
+    <sections>
+        <items>
+            <label>Outside Prefix</label>
+            <name>reqOutsidePrefix</name>
+            <value>1</value>
+        </items>
+        <items>
+            <label>Long Distance Prefix</label>
+            <name>reqLongDistPrefix</name>
+            <value>1</value>
+        </items>
+        <items>
+            <label>International Prefix</label>
+            <name>reqInternationalPrefix</name>
+            <value>01</value>
+        </items>
+        <label>Dialing Options</label>
+        <name>reqDialingOptions</name>
+    </sections>
+    <version>61</version>
+</CallCenter>

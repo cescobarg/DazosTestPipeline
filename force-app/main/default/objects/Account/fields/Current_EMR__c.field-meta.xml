@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_EMR__c</fullName>
+    <label>Current EMR</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alleva EMR</fullName>
+                <default>false</default>
+                <label>Alleva EMR</label>
+            </value>
+            <value>
+                <fullName>KIPu</fullName>
+                <default>false</default>
+                <label>KIPu</label>
+            </value>
+            <value>
+                <fullName>Lightning Step</fullName>
+                <default>false</default>
+                <label>Lightning Step</label>
+            </value>
+            <value>
+                <fullName>Sunwave</fullName>
+                <default>false</default>
+                <label>Sunwave</label>
+            </value>
+            <value>
+                <fullName>Opus</fullName>
+                <default>false</default>
+                <label>Opus</label>
+            </value>
+            <value>
+                <fullName>Medical Mime</fullName>
+                <default>false</default>
+                <label>Medical Mime</label>
+            </value>
+            <value>
+                <fullName>ZenCharts</fullName>
+                <default>false</default>
+                <label>ZenCharts</label>
+            </value>
+            <value>
+                <fullName>BestNotes</fullName>
+                <default>false</default>
+                <label>BestNotes</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Unknown or No EMR</fullName>
+                <default>false</default>
+                <label>Unknown or No EMR</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

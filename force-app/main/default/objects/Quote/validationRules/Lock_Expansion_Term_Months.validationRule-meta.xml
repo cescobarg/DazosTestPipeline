@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lock_Expansion_Term_Months</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    NOT(ISNEW()), /* Only applies on edit */
+    NOT(ISBLANK(OpportunityId)), /* Ensure quote is linked */
+    Opportunity.RecordType.DeveloperName = &quot;Expansion&quot;,
+    ISCHANGED(Term_Months__c),
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+)</errorConditionFormula>
+    <errorMessage>You can’t edit Term Months on a quote when it’s linked to an Expansion</errorMessage>
+</ValidationRule>

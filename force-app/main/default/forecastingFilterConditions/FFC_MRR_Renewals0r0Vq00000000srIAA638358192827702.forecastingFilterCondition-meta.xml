@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingFilterCondition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <colName>OPPORTUNITY.RECORDTYPE</colName>
+    <fieldName>RecordType.Name</fieldName>
+    <forecastingFilter>FF_MRR_Renewals0hlVq00000002t3IAA460722380940843</forecastingFilter>
+    <forecastingSourceDefinition>7syVq00000004DJ</forecastingSourceDefinition>
+    <isProtected>false</isProtected>
+    <masterLabel>FFC_MRR_Renewals0r0Vq00000000srIAA638358192827702</masterLabel>
+    <operation>equals</operation>
+    <sortOrder>1</sortOrder>
+    <value>012fi000000880RAAQ</value>
+</ForecastingFilterCondition>

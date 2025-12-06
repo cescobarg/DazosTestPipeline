@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingFilter xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterLogic>1</filterLogic>
+    <forecastingType>MRR_Renewals</forecastingType>
+    <forecastingTypeSource>FTS_MRR_Renewals7syVq00000004DJIAY685113899689895</forecastingTypeSource>
+    <isProtected>false</isProtected>
+    <masterLabel>FF_MRR_Renewals0hlVq00000002t3IAA460722380940843</masterLabel>
+</ForecastingFilter>

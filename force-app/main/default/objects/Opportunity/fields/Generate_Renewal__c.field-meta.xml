@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Renewal__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Admin only: Will generate renewal and contract records. Use when adjusting the existing opportunity and you need to realign the renewal and contract</inlineHelpText>
+    <label>Generate Renewal</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

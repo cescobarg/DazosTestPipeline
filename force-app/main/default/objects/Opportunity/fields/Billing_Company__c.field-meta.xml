@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_Company__c</fullName>
+    <label>Billing Company</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Hansei</fullName>
+                <default>false</default>
+                <label>Hansei</label>
+            </value>
+            <value>
+                <fullName>Billing Solutions</fullName>
+                <default>false</default>
+                <label>Billing Solutions</label>
+            </value>
+            <value>
+                <fullName>MD Solutions</fullName>
+                <default>false</default>
+                <label>MD Solutions</label>
+            </value>
+            <value>
+                <fullName>SJ Billing</fullName>
+                <default>false</default>
+                <label>SJ Billing</label>
+            </value>
+            <value>
+                <fullName>Element MB</fullName>
+                <default>false</default>
+                <label>Element MB</label>
+            </value>
+            <value>
+                <fullName>Aspire MB</fullName>
+                <default>false</default>
+                <label>Aspire MB</label>
+            </value>
+            <value>
+                <fullName>Mt Yonah</fullName>
+                <default>false</default>
+                <label>Mt Yonah</label>
+            </value>
+            <value>
+                <fullName>Prosperity BH</fullName>
+                <default>false</default>
+                <label>Prosperity BH</label>
+            </value>
+            <value>
+                <fullName>CA Billing</fullName>
+                <default>false</default>
+                <label>CA Billing</label>
+            </value>
+            <value>
+                <fullName>Data Pro</fullName>
+                <default>false</default>
+                <label>Data Pro</label>
+            </value>
+            <value>
+                <fullName>Compass Revenue Solutions</fullName>
+                <default>false</default>
+                <label>Compass Revenue Solutions</label>
+            </value>
+            <value>
+                <fullName>United Billing Solutions</fullName>
+                <default>false</default>
+                <label>United Billing Solutions</label>
+            </value>
+            <value>
+                <fullName>Nextus Billing Solutions</fullName>
+                <default>false</default>
+                <label>Nextus Billing Solutions</label>
+            </value>
+            <value>
+                <fullName>Aftermath Billing</fullName>
+                <default>false</default>
+                <label>Aftermath Billing</label>
+            </value>
+            <value>
+                <fullName>Interface Billing</fullName>
+                <default>false</default>
+                <label>Interface Billing</label>
+            </value>
+            <value>
+                <fullName>Keystone Medical</fullName>
+                <default>false</default>
+                <label>Keystone Medical</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

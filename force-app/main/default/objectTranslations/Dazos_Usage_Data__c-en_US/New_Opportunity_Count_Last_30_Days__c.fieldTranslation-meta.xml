@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of new Opportunities created in the last 30 days for the Account. --></help>
+    <label><!-- New Opportunity Count Last 30 Days --></label>
+    <name>New_Opportunity_Count_Last_30_Days__c</name>
+</CustomFieldTranslation>

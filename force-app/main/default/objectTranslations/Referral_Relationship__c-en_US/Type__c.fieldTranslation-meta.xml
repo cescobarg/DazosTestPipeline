@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Affiliate</masterLabel>
+        <translation><!-- Affiliate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agency Vendor</masterLabel>
+        <translation><!-- Agency Vendor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conference</masterLabel>
+        <translation><!-- Conference --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer</masterLabel>
+        <translation><!-- Customer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dazos Team</masterLabel>
+        <translation><!-- Dazos Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Vendor</masterLabel>
+        <translation><!-- Other Vendor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Purchased Leads</masterLabel>
+        <translation><!-- Purchased Leads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SaaS Vendor</masterLabel>
+        <translation><!-- SaaS Vendor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

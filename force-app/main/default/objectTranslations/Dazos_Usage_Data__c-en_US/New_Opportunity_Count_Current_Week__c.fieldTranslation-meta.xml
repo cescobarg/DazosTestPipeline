@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of new Opportunities created this week for the Account. --></help>
+    <label><!-- New Opportunity Count Current Week --></label>
+    <name>New_Opportunity_Count_Current_Week__c</name>
+</CustomFieldTranslation>

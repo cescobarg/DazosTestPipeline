@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of Instant VOBs created in the last 60 days for this Account. --></help>
+    <label><!-- Instant VOBs Last 60 days --></label>
+    <name>Instant_VOBs_Last_60_days__c</name>
+</CustomFieldTranslation>

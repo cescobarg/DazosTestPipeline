@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CTM</fullName>
+        <default>false</default>
+        <label>CTM</label>
+    </customValue>
+    <customValue>
+        <fullName>Call Rail</fullName>
+        <default>false</default>
+        <label>Call Rail</label>
+    </customValue>
+    <customValue>
+        <fullName>5nine</fullName>
+        <default>false</default>
+        <label>5nine</label>
+    </customValue>
+    <customValue>
+        <fullName>8x8</fullName>
+        <default>false</default>
+        <label>8x8</label>
+    </customValue>
+    <customValue>
+        <fullName>Dial PAD</fullName>
+        <default>false</default>
+        <label>Dial PAD</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Ring Central</fullName>
+        <default>false</default>
+        <label>Ring Central</label>
+    </customValue>
+    <customValue>
+        <fullName>SpruceHealth</fullName>
+        <default>false</default>
+        <label>SpruceHealth</label>
+    </customValue>
+    <masterLabel>Current VOIP</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

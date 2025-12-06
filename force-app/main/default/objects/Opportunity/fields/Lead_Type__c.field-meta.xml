@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Type__c</fullName>
+    <label>Lead Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Success</fullName>
+                <default>false</default>
+                <label>Customer Success</label>
+            </value>
+            <value>
+                <fullName>Dazos Sales Team</fullName>
+                <default>false</default>
+                <label>Dazos Sales Team</label>
+            </value>
+            <value>
+                <fullName>Form Fill</fullName>
+                <default>false</default>
+                <label>Form Fill</label>
+            </value>
+            <value>
+                <fullName>iVerify Signup</fullName>
+                <default>false</default>
+                <label>iVerify Signup</label>
+            </value>
+            <value>
+                <fullName>Affiliate/Referral Partner</fullName>
+                <default>false</default>
+                <label>Affiliate/Referral Partner</label>
+            </value>
+            <value>
+                <fullName>Dazos Customer</fullName>
+                <default>false</default>
+                <label>Dazos Customer</label>
+            </value>
+            <value>
+                <fullName>Customer Support</fullName>
+                <default>false</default>
+                <label>Customer Support</label>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Bought Leads</fullName>
+                <default>false</default>
+                <label>Bought Leads</label>
+            </value>
+            <value>
+                <fullName>LinkedIn</fullName>
+                <default>false</default>
+                <label>LinkedIn</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

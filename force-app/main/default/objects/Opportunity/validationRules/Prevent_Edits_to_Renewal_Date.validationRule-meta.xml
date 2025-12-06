@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_Edits_to_Renewal_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(ISNEW()), /* Only applies to existing records */
+ISCHANGED(  Original_Renewal_Date__c  ), /* User is trying to change the field */
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; /* Non-admins only */
+)</errorConditionFormula>
+    <errorDisplayField>Original_Renewal_Date__c</errorDisplayField>
+    <errorMessage>Renewal Date can only be set or edited by a System Administrator.</errorMessage>
+</ValidationRule>

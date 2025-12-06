@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_VOIP__c</fullName>
+    <label>Current VOIP</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CTM</fullName>
+                <default>false</default>
+                <label>CTM</label>
+            </value>
+            <value>
+                <fullName>Call Rail</fullName>
+                <default>false</default>
+                <label>Call Rail</label>
+            </value>
+            <value>
+                <fullName>5nine</fullName>
+                <default>false</default>
+                <label>5nine</label>
+            </value>
+            <value>
+                <fullName>8x8</fullName>
+                <default>false</default>
+                <label>8x8</label>
+            </value>
+            <value>
+                <fullName>Dial PAD</fullName>
+                <default>false</default>
+                <label>Dial PAD</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Ring Central</fullName>
+                <default>false</default>
+                <label>Ring Central</label>
+            </value>
+            <value>
+                <fullName>SpruceHealth</fullName>
+                <default>false</default>
+                <label>SpruceHealth</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

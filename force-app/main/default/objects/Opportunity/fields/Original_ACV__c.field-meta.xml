@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Original_ACV__c</fullName>
+    <description>The original ACV value when this renewal was created, to be used in calculating ACV growth. For new business, this will be the same as the standard ACV field and growth will always be $0.</description>
+    <inlineHelpText>The original ACV value when this renewal was created, to be used in calculating ACV growth. For new business, this will be the same as the standard ACV field and growth will always be $0.</inlineHelpText>
+    <label>Original ACV</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Currency</type>
+</CustomField>

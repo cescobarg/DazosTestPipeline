@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Stores the number of VOBs associated with this account for Leads. --></help>
+    <label><!-- VOBs per Lead --></label>
+    <name>VOBs_per_Lead__c</name>
+</CustomFieldTranslation>

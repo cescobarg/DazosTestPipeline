@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Dazos Usage Data</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Dazos Usage Data</value>
+    </caseValues>
+    <layouts>
+        <layout>Dazos Usage Data Layout</layout>
+        <sections>
+            <label><!-- Account Features --></label>
+            <section>Account Features</section>
+        </sections>
+        <sections>
+            <label><!-- Account Overview --></label>
+            <section>Account Overview</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Instant VOBs Activity --></label>
+            <section>Instant VOBs Activity</section>
+        </sections>
+        <sections>
+            <label><!-- Integrations --></label>
+            <section>Integrations</section>
+        </sections>
+        <sections>
+            <label><!-- Leads Activity --></label>
+            <section>Leads Activity</section>
+        </sections>
+        <sections>
+            <label><!-- Opportunities Activity --></label>
+            <section>Opportunities Activity</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

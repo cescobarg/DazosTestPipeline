@@ -1,0 +1,818 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Assign_Variable_Values</name>
+        <label>Assign Variable Values</label>
+        <locationX>264</locationX>
+        <locationY>674</locationY>
+        <assignmentItems>
+            <assignToReference>colAllQLI</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>varQLI</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear1Bookings</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>BookingsYear1Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear2Bookings</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>BookingsYear2Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear3Bookings</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>BookingsYear3Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear1ARR</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ARRYear1Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear2ARR</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ARRYear2Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear3ARR</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>ARRYear3Total</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear1Bookings</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NonRecurringBookingsTotalYear1</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear2Bookings</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NonRecurringBookingsTotalYear2</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varYear3Bookings</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <elementReference>NonRecurringBookingsTotalYear3</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Loop</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Year</name>
+        <label>Assign Year</label>
+        <locationX>264</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>varQLI.Term_Year_CNDYBX__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>forYear</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Variable_Values</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Assign_Year_Values</name>
+        <label>Assign Year Values</label>
+        <locationX>264</locationX>
+        <locationY>458</locationY>
+        <assignmentItems>
+            <assignToReference>varQLI.Bookings__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Bookings__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQLI.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQLI.Product2Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Product2Id</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQLI.Recurring__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Recurring__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQLI.Term_Year__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Term_Year__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQLI.Total_Sales_Price__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Total_Sales_Price__c</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varRangeLower</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>forRangeLower</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varRangeUpper</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>forRangeUpper</elementReference>
+            </value>
+        </assignmentItems>
+        <assignmentItems>
+            <assignToReference>varQLI.Term_Year_CNDYBX__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Loop.Term_Year__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Assign_Year</targetReference>
+        </connector>
+    </assignments>
+    <description>Updated bookings formula</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>ARRYear1Total</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+  AND(
+    {!Loop.Recurring__c},
+    TRIM(LEFT({!Loop.Term_Year_CNDYBX__c}, 1)) = &quot;1&quot;,
+    TRIM(RIGHT({!Loop.Term_Year_CNDYBX__c}, 1)) &gt;= &quot;1&quot;
+  ),
+ {!Loop.ARR__c},
+  null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>ARRYear2Total</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+ AND(
+          {!Loop.Recurring__c}, TRIM(LEFT({!Loop.Term_Year_CNDYBX__c}, 1)) &lt;= &quot;2&quot;, 
+           TRIM(RIGHT({!Loop.Term_Year_CNDYBX__c}, 1)) &gt;= &quot;2&quot;),
+         {!Loop.ARR__c} ,
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>ARRYear3Total</name>
+        <dataType>Currency</dataType>
+        <expression>IF( 
+    AND(
+          {!Loop.Recurring__c}, TRIM(LEFT({!Loop.Term_Year_CNDYBX__c}, 1)) &lt;= &quot;3&quot;, 
+           TRIM(RIGHT({!Loop.Term_Year_CNDYBX__c}, 1)) &gt;= &quot;3&quot;),
+           {!Loop.ARR__c},
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <description>Updated formula for single QLI (1-)</description>
+        <name>BookingsYear1Total</name>
+        <dataType>Currency</dataType>
+        <expression>
+IF(
+    AND(
+        {!Loop.Recurring__c},
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &lt;= 1,
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &gt;= 1
+    ),
+    {!Loop.Bookings__c} /
+    (
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) -
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) + 1
+    ),
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>BookingsYear2Total</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    AND(
+        {!Loop.Recurring__c},
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &lt;= 2,
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &gt;= 2
+    ),
+    {!Loop.Bookings__c} /
+    (
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) -
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) + 1
+    ),
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>BookingsYear3Total</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    AND(
+        NOT({!Loop.Recurring__c}),
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &lt;= 3,
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &gt;= 3
+    ),
+    {!Loop.Bookings__c} /
+    (
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) -
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) + 1
+    ),
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>forRangeLower</name>
+        <dataType>Number</dataType>
+        <expression>IF(
+(({!Get_Quote.Contract_Start_Date__c}-{!Loop.Start_Date__c}) / 365) * -1 &lt; 1 , 1,
+FLOOR(((({!Get_Quote.Contract_Start_Date__c}-{!Loop.Start_Date__c}) / 365) * -1) +1))</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>forRangeUpper</name>
+        <dataType>Number</dataType>
+        <expression>(({!Get_Quote.Contract_Start_Date__c}-{!Loop.End_Date__c}) / 365) * -1</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>forYear</name>
+        <dataType>String</dataType>
+        <expression>IF( {!varRangeLower} != CEILING({!varRangeUpper}) &amp;&amp; NOT(ISBLANK({!varRangeUpper})) &amp;&amp; {!varRangeUpper} &gt; 1,  TEXT({!varRangeLower}) &amp; &quot; - &quot; &amp; TEXT( ROUND({!varRangeUpper},0 )), TEXT({!varRangeLower})  )</expression>
+    </formulas>
+    <formulas>
+        <name>forYearOneEndDate</name>
+        <dataType>Date</dataType>
+        <expression>BLANKVALUE({!varYearOneEndDate}, {!Loop.End_Date__c})</expression>
+    </formulas>
+    <formulas>
+        <name>NonRecurringBookingsTotalYear1</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    AND(
+        NOT({!Loop.Recurring__c}),
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &lt;= 1,
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &gt;= 1
+    ),
+    {!Loop.Bookings__c} /
+    (
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) -
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) + 1
+    ),
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>NonRecurringBookingsTotalYear2</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    AND(
+        NOT({!Loop.Recurring__c}),
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &lt;= 2,
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &gt;= 2
+    ),
+    {!Loop.Bookings__c} /
+    (
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) -
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) + 1
+    ),
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <formulas>
+        <name>NonRecurringBookingsTotalYear3</name>
+        <dataType>Currency</dataType>
+        <expression>IF(
+    AND(
+        NOT({!Loop.Recurring__c}),
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &lt;= 3,
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) &gt;= 3
+    ),
+    {!Loop.Bookings__c} /
+    (
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                MID(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) + 1,
+                    LEN(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;))
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) -
+        VALUE(
+            IF(
+                CONTAINS(SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;), &quot;-&quot;),
+                LEFT(
+                    SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;),
+                    FIND(&quot;-&quot;, SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)) - 1
+                ),
+                SUBSTITUTE(TRIM({!Loop.Term_Year_CNDYBX__c}), &quot; &quot;, &quot;&quot;)
+            )
+        ) + 1
+    ),
+    null
+)</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>[Quote Line Item] Autolaunched {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Quote Line Item] Autolaunched</label>
+    <loops>
+        <name>Loop</name>
+        <label>Loop</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <collectionReference>Get_Quote_line_Items</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Assign_Year_Values</targetReference>
+        </nextValueConnector>
+        <noMoreValuesConnector>
+            <targetReference>Update_Quote_Line_Items</targetReference>
+        </noMoreValuesConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Quote</name>
+        <label>Get Quote</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Get_Quote_line_Items</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordid</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Quote</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Get_Quote_line_Items</name>
+        <label>Get Quote line Items</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>QuoteId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordid</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>QuoteLineItem</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Quote</name>
+        <label>Update Quote</label>
+        <locationX>176</locationX>
+        <locationY>974</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordid</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Year_1_ARR__c</field>
+            <value>
+                <elementReference>varYear1ARR</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year_1_Bookings__c</field>
+            <value>
+                <elementReference>varYear1Bookings</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year_2_ARR__c</field>
+            <value>
+                <elementReference>varYear2ARR</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year_2_Bookings__c</field>
+            <value>
+                <elementReference>varYear2Bookings</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year_3_ARR__c</field>
+            <value>
+                <elementReference>varYear3ARR</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Year_3_Bookings__c</field>
+            <value>
+                <elementReference>varYear3Bookings</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Quote</object>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Quote_Line_Items</name>
+        <label>Update Quote Line Items</label>
+        <locationX>176</locationX>
+        <locationY>866</locationY>
+        <connector>
+            <targetReference>Update_Quote</targetReference>
+        </connector>
+        <inputReference>colAllQLI</inputReference>
+    </recordUpdates>
+    <runInMode>SystemModeWithoutSharing</runInMode>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Quote</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>colAllQLI</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>QuoteLineItem</objectType>
+    </variables>
+    <variables>
+        <name>recordid</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varQLI</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>QuoteLineItem</objectType>
+    </variables>
+    <variables>
+        <name>varRangeLower</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varRangeUpper</name>
+        <dataType>Number</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYear1ARR</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYear1Bookings</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYear2ARR</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYear2Bookings</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYear3ARR</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYear3Bookings</name>
+        <dataType>Currency</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <scale>2</scale>
+    </variables>
+    <variables>
+        <name>varYearOneEndDate</name>
+        <dataType>Date</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>Loop.End_Date__c</elementReference>
+        </value>
+    </variables>
+</Flow>

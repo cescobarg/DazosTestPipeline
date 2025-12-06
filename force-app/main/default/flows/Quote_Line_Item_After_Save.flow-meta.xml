@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>60.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <formulas>
+        <name>Toggle</name>
+        <dataType>Boolean</dataType>
+        <expression>IF({!$Record.Toggle__c} = TRUE, FALSE,TRUE)</expression>
+    </formulas>
+    <interviewLabel>[Quote Line Item] After Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Quote Line Item] After Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_QLI</name>
+        <label>Update QLI</label>
+        <locationX>314</locationX>
+        <locationY>276</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>QuoteId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.QuoteId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Toggle__c</field>
+            <value>
+                <elementReference>Toggle</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>56</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Quote_Line_Item_Autolaunched</targetReference>
+        </connector>
+        <object>QuoteLineItem</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <scheduledPaths>
+            <name>x1_min</name>
+            <connector>
+                <targetReference>Update_QLI</targetReference>
+            </connector>
+            <label>x1 min</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <recordField>LastModifiedDate</recordField>
+            <timeSource>RecordField</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <subflows>
+        <name>Quote_Line_Item_Autolaunched</name>
+        <label>Quote Line Item: Autolaunched</label>
+        <locationX>50</locationX>
+        <locationY>276</locationY>
+        <flowName>Quote_Line_Item_Autolaunched</flowName>
+        <inputAssignments>
+            <name>recordid</name>
+            <value>
+                <elementReference>$Record.QuoteId</elementReference>
+            </value>
+        </inputAssignments>
+    </subflows>
+</Flow>

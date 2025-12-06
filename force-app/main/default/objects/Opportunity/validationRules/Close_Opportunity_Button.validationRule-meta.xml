@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Close_Opportunity_Button</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+
+ ISCHANGED(StageName),
+ NOT(ISNEW()),
+ IsClosed = TRUE,
+ Ready_To_Close__c = FALSE,
+ $Profile.Name &lt;&gt; &quot;System Administrator&quot;
+
+)</errorConditionFormula>
+    <errorMessage>You must use the &apos;Close Opportunity&apos; button to move the stage to Closed Won or Closed Lost.</errorMessage>
+</ValidationRule>

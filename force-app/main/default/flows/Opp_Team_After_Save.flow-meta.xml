@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Set_AE_Lookup</name>
+        <label>Set AE Lookup</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>opportunity.Account_Executive__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.UserId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_CSM_Lookup</name>
+        <label>Set CSM Lookup</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>opportunity.Customer_Success_Manager__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.UserId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Opportunity_Id</name>
+        <label>Set Opportunity Id</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>opportunity.Id</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OpportunityId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>What_Role</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_SDR_Lookup</name>
+        <label>Set SDR Lookup</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>opportunity.Sales_Development_Rep__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.UserId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Opportunity</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Do_Team_Lookups_Need_Updated</name>
+        <label>Do Team Lookups Need Updated?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Don&apos;t Update</defaultConnectorLabel>
+        <rules>
+            <name>Update_Teams</name>
+            <conditionLogic>(1 AND 2) OR (3 AND 4) OR (5 AND 6)</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Account_Executive__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.UserId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Account Executive</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Sales_Development_Rep__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.UserId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Development Rep</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Opportunity.Customer_Success_Manager__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>$Record.UserId</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Success Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Opportunity_Id</targetReference>
+            </connector>
+            <label>Update Teams</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Is_Create_or_Update</name>
+        <label>Is Create or Update</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>Is Update</defaultConnectorLabel>
+        <rules>
+            <name>Is_Create</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>isNew</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Do_Team_Lookups_Need_Updated</targetReference>
+            </connector>
+            <label>Is Create</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>What_Role</name>
+        <label>What Role?</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Update_Opportunity</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Account_Executive</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Account Executive</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_AE_Lookup</targetReference>
+            </connector>
+            <label>Account Executive</label>
+        </rules>
+        <rules>
+            <name>Sales_Development_Rep</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Sales Development Rep</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_SDR_Lookup</targetReference>
+            </connector>
+            <label>Sales Development Rep</label>
+        </rules>
+        <rules>
+            <name>Customer_Success_Manager</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.TeamMemberRole</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Customer Success Manager</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_CSM_Lookup</targetReference>
+            </connector>
+            <label>Customer Success Manager</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>isNew</name>
+        <dataType>Boolean</dataType>
+        <expression>ISNEW()</expression>
+    </formulas>
+    <interviewLabel>[Opp Team] After Save {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Opp Team] After Save</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update_Opportunity</name>
+        <label>Update Opportunity</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputReference>opportunity</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Is_Create_or_Update</targetReference>
+        </connector>
+        <object>OpportunityTeamMember</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>opportunity</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+</Flow>

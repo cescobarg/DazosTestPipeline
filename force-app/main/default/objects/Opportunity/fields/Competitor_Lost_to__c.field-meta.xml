@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Competitor_Lost_to__c</fullName>
+    <label>Competitor Lost to</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Axiom</fullName>
+                <default>false</default>
+                <label>Axiom</label>
+            </value>
+            <value>
+                <fullName>Behave Health</fullName>
+                <default>false</default>
+                <label>Behave Health</label>
+            </value>
+            <value>
+                <fullName>FiveCRM</fullName>
+                <default>false</default>
+                <label>FiveCRM</label>
+            </value>
+            <value>
+                <fullName>HubSpot</fullName>
+                <default>false</default>
+                <label>HubSpot</label>
+            </value>
+            <value>
+                <fullName>Kipu CRM</fullName>
+                <default>false</default>
+                <label>Kipu CRM</label>
+            </value>
+            <value>
+                <fullName>Leads360</fullName>
+                <default>false</default>
+                <label>Leads360</label>
+            </value>
+            <value>
+                <fullName>LeadSquared</fullName>
+                <default>false</default>
+                <label>LeadSquared</label>
+            </value>
+            <value>
+                <fullName>LightningStep</fullName>
+                <default>false</default>
+                <label>LightningStep</label>
+            </value>
+            <value>
+                <fullName>New Resilience</fullName>
+                <default>false</default>
+                <label>New Resilience</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Sugar</fullName>
+                <default>false</default>
+                <label>Sugar</label>
+            </value>
+            <value>
+                <fullName>Sunwave</fullName>
+                <default>false</default>
+                <label>Sunwave</label>
+            </value>
+            <value>
+                <fullName>Supportable</fullName>
+                <default>false</default>
+                <label>Supportable</label>
+            </value>
+            <value>
+                <fullName>Zoho</fullName>
+                <default>false</default>
+                <label>Zoho</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

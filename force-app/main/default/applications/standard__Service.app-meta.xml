@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-Case</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <tabs>standard-Case</tabs>
+    <tabs>standard-Solution</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>standard-WaveHome</tabs>
+    <tabs>Referral__c</tabs>
+    <tabs>Referral_Relationship__c</tabs>
+    <tabs>Dazos_Usage_Data__c</tabs>
+    <tabs>CRM_User__c</tabs>
+    <tabs>Referral_Contact__c</tabs>
+    <tabs>Referral_Source__c</tabs>
+    <tabs>CRM_Referral__c</tabs>
+</CustomApplication>

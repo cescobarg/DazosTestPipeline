@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Money__c</fullName>
+    <formula>MAX(
+    0,
+    IF(
+        RecordType.DeveloperName = &quot;Renewal&quot;,
+        ACV__c - Original_ACV__c,
+        ACV__c
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This formula is used to calculate &quot;New Money&quot; depending on whether the Opportunity is a Renewal or not. For renewals, it only counts the growth (if there is any); for other types, it uses the full ACV.</inlineHelpText>
+    <label>New Money</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

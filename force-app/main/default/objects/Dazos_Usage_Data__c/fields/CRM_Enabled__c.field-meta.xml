@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CRM_Enabled__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Shows whether CRM features are enabled for this account.</description>
+    <inlineHelpText>Shows if CRM feature is enabled. Set by integration.</inlineHelpText>
+    <label>CRM Enabled</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

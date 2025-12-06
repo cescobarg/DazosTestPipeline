@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TCV__c</fullName>
+    <inlineHelpText>Total amount of recurring revenue and one-time fees the customer will pay over the entire course of this contract</inlineHelpText>
+    <label>TCV</label>
+    <summarizedField>QuoteLineItem.Bookings__c</summarizedField>
+    <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

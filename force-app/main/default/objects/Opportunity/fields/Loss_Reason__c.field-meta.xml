@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Loss_Reason__c</fullName>
+    <description>*** IF THIS LIST IS EDITED *** 
+The [Contract] Early Termination screen flow must also be edited. The picklist values are manually created in that flow.</description>
+    <label>Loss Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acquisition</fullName>
+                <default>false</default>
+                <label>Acquisition</label>
+            </value>
+            <value>
+                <fullName>EMR Integration Issues</fullName>
+                <default>false</default>
+                <label>EMR Integration Issues</label>
+            </value>
+            <value>
+                <fullName>Failure to Implement or Go Live</fullName>
+                <default>false</default>
+                <label>Failure to Implement or Go Live</label>
+            </value>
+            <value>
+                <fullName>Integration Features</fullName>
+                <default>false</default>
+                <label>Integration Features</label>
+            </value>
+            <value>
+                <fullName>Lack of Adoption</fullName>
+                <default>false</default>
+                <label>Lack of Adoption</label>
+            </value>
+            <value>
+                <fullName>Loss of Champion or Turnover</fullName>
+                <default>false</default>
+                <label>Loss of Champion or Turnover</label>
+            </value>
+            <value>
+                <fullName>Missing Crucial Features</fullName>
+                <default>false</default>
+                <label>Missing Crucial Features</label>
+            </value>
+            <value>
+                <fullName>No Decision / Non-Responsive</fullName>
+                <default>false</default>
+                <label>No Decision / Non-Responsive</label>
+            </value>
+            <value>
+                <fullName>Not User Friendly / Too Difficult</fullName>
+                <default>false</default>
+                <label>Not User Friendly / Too Difficult</label>
+            </value>
+            <value>
+                <fullName>Not Worth It</fullName>
+                <default>false</default>
+                <label>Not Worth It</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Out of Business</fullName>
+                <default>false</default>
+                <label>Out of Business</label>
+            </value>
+            <value>
+                <fullName>Product Bugs or Issues</fullName>
+                <default>false</default>
+                <label>Product Bugs or Issues</label>
+            </value>
+            <value>
+                <fullName>Stopped Paying - No Contact</fullName>
+                <default>false</default>
+                <label>Stopped Paying - No Contact</label>
+            </value>
+            <value>
+                <fullName>Too Expensive</fullName>
+                <default>false</default>
+                <label>Too Expensive</label>
+            </value>
+            <value>
+                <fullName>Unhappy with Support</fullName>
+                <default>false</default>
+                <label>Unhappy with Support</label>
+            </value>
+            <value>
+                <fullName>Unknown</fullName>
+                <default>false</default>
+                <label>Unknown</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

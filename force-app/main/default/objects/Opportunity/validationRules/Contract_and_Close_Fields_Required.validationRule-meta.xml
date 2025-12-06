@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_and_Close_Fields_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISCHANGED(StageName),
+  ISPICKVAL(StageName, &quot;Contract &amp; Close&quot;),
+OR(
+  ISBLANK( Required_Integrations__c ),
+  ISBLANK( Data_Migration_Requirements__c ) 
+
+))</errorConditionFormula>
+    <errorMessage>Please add Required Integrations and Data Migration Details</errorMessage>
+</ValidationRule>

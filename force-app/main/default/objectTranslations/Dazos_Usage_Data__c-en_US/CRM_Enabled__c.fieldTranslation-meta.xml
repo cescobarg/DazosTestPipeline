@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Shows if CRM feature is enabled. Set by integration. --></help>
+    <label><!-- CRM Enabled --></label>
+    <name>CRM_Enabled__c</name>
+</CustomFieldTranslation>

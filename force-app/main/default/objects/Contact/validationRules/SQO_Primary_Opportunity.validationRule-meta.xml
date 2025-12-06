@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SQO_Primary_Opportunity</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+   ISCHANGED(Lifecycle_Stage__c),
+   ISPICKVAL(Lifecycle_Stage__c, &quot;Opportunity&quot;),
+   ISBLANK(Primary_Opportunity__c)
+)</errorConditionFormula>
+    <errorDisplayField>Primary_Opportunity__c</errorDisplayField>
+    <errorMessage>You must create or select an Opportunity before moving to SQO.</errorMessage>
+</ValidationRule>

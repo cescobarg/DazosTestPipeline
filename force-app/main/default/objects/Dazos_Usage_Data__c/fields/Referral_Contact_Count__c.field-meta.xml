@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Referral_Contact_Count__c</fullName>
+    <description>Number of Referral Contacts associated with the Account.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of Referral Contacts associated with the Account.</inlineHelpText>
+    <label>Referral Contact Count</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

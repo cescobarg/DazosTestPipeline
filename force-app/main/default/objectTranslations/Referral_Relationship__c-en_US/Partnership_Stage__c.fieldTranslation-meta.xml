@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Partnership Stage --></label>
+    <name>Partnership_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Closed - Lost</masterLabel>
+        <translation><!-- Closed - Lost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Demoing</masterLabel>
+        <translation><!-- Demoing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Negotiation</masterLabel>
+        <translation><!-- Negotiation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New Deal</masterLabel>
+        <translation><!-- New Deal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partnered</masterLabel>
+        <translation><!-- Partnered --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

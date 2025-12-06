@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Non_Renewal_Notice_Days__c</fullName>
+    <description>Number of days before the end of the current subscription period</description>
+    <externalId>false</externalId>
+    <inlineHelpText>The number of days before the end of the current subscription period for which the customer can opt out</inlineHelpText>
+    <label>Non-Renewal Notice Days</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

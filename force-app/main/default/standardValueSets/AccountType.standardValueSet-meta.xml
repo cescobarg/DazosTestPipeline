@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Current Customer</fullName>
+        <default>false</default>
+        <label>Current Customer</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Affiliate</fullName>
+        <default>false</default>
+        <label>Affiliate</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Conference</fullName>
+        <default>false</default>
+        <label>Conference</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dazos Team</fullName>
+        <default>false</default>
+        <label>Dazos Team</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bought Leads</fullName>
+        <default>false</default>
+        <label>Bought Leads</label>
+    </standardValue>
+</StandardValueSet>

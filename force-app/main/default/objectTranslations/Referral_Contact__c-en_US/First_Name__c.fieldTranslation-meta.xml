@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- The first name of the referral contact --></help>
+    <label><!-- First Name --></label>
+    <name>First_Name__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingFilter xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterLogic>1</filterLogic>
+    <forecastingType>MRR_New_Biz_Expansion</forecastingType>
+    <forecastingTypeSource>FTS_MRR_New_Biz_Expansion7syVq00000004DJIAY026263409486909</forecastingTypeSource>
+    <isProtected>false</isProtected>
+    <masterLabel>FF_MRR_New_Biz_Expansion0hlVq00000002rRIAQ998947807548502</masterLabel>
+</ForecastingFilter>

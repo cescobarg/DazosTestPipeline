@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>blueBox</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>blueBox</shortDescription>
+        <value>&lt;div class=&quot;slds-box slds-theme_inverse slds-theme_alert-texture&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>greenBox</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>greenBox</shortDescription>
+        <value>&lt;div class=&quot;slds-box slds-theme_success&quot;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>redTextureBox</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>redTextureBox</shortDescription>
+        <value>&lt;div class=&quot;slds-box slds-theme_error slds-theme_alert-texture&quot;&gt;</value>
+    </labels>
+</CustomLabels>

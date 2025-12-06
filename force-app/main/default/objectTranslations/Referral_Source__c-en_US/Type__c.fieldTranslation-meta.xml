@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Competitor</masterLabel>
+        <translation><!-- Competitor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Employer/EAP/Union</masterLabel>
+        <translation><!-- Employer/EAP/Union --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facility</masterLabel>
+        <translation><!-- Facility --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hospital</masterLabel>
+        <translation><!-- Hospital --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interventionist</masterLabel>
+        <translation><!-- Interventionist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Legal/Court System</masterLabel>
+        <translation><!-- Legal/Court System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mental Health Practice</masterLabel>
+        <translation><!-- Mental Health Practice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Previous Patient</masterLabel>
+        <translation><!-- Previous Patient --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Practice</masterLabel>
+        <translation><!-- Private Practice --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recruit</masterLabel>
+        <translation><!-- Recruit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Referral Partner/Vendor</masterLabel>
+        <translation><!-- Referral Partner/Vendor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

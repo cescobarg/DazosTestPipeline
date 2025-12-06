@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Terms_Conditions__c</fullName>
+    <defaultValue>&quot;4. For any future, new, optional or additional services, plugins, applications, modules and Service enhancements that are not included in the core Service, there may be additional charges based on the fees stated on our most recent price list for that desired Service, plugin, application, or module, as listed on the Dazos website on the Plugins / Pricing Page. &quot; &amp; 
+&quot;5. Client agrees to keep the provisions of this Addendum strictly confidential, available only to senior executives of Client. In the event Client breaches this confidentiality agreement, then monthly and other service fees revert to the published price list, without discounts. &quot; &amp; 
+&quot;6. This agreement will automatically renew for an additional term equal to the length of the initial term, commencing immediately consecutive to the subsequent term, unless clients give written notice 30 days prior to the expiration of the contract. &quot; &amp; 
+&quot;7. iVerify pricing is not included in the license pricing (additional cost) and is based on quantity purchased, as follows:&quot; &amp; 
+&quot;\n100 credits: $100&quot; &amp; 
+&quot;\n500 credits: $350 ($0.70/each)&quot; &amp; 
+&quot;\n1,000 credits: $500 ($0.50/each)&quot; &amp; 
+&quot;\n2,500 credits: $1,000 ($0.40/each)&quot; &amp; 
+&quot;\n5,000 credits: $1,750 ($0.35/each)&quot;</defaultValue>
+    <label>Terms &amp; Conditions</label>
+    <length>131072</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>50</visibleLines>
+</CustomField>

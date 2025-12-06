@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>CMD</fullName>
+        <default>false</default>
+        <label>CMD</label>
+    </customValue>
+    <customValue>
+        <fullName>Advanced MD</fullName>
+        <default>false</default>
+        <label>Advanced MD</label>
+    </customValue>
+    <customValue>
+        <fullName>Avea</fullName>
+        <default>false</default>
+        <label>Avea</label>
+    </customValue>
+    <customValue>
+        <fullName>External</fullName>
+        <default>false</default>
+        <label>External</label>
+    </customValue>
+    <customValue>
+        <fullName>N/A</fullName>
+        <default>false</default>
+        <label>N/A</label>
+    </customValue>
+    <customValue>
+        <fullName>Alleva</fullName>
+        <default>false</default>
+        <label>Alleva</label>
+    </customValue>
+    <customValue>
+        <fullName>Lightning Step</fullName>
+        <default>false</default>
+        <label>Lightning Step</label>
+    </customValue>
+    <masterLabel>Billing Software</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

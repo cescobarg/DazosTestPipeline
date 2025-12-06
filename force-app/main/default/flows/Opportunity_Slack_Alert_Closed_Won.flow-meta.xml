@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Closed Won</description>
+    <environments>Default</environments>
+    <interviewLabel>[Opportunity] Slack Alert Closed Won {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>[Opportunity] Slack Alert Closed Won</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>IsWon</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Type</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>New Business</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <name>X1_min</name>
+            <label>Slack Alert 1 min Delay</label>
+            <offsetNumber>1</offsetNumber>
+            <offsetUnit>Minutes</offsetUnit>
+            <timeSource>RecordTriggerEvent</timeSource>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>InvalidDraft</status>
+    <textTemplates>
+        <name>WonNotification</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>*We just closed an opportunity!!*
+
+📈 *Opportunity:* {!$Record.Name}  
+💰 *ACV:* ${!$Record.ACV__c}  
+🤝 *Closed By:* {!$Record.Owner.FirstName} {!$Record.Owner.LastName}
+📅 *Close Date:* {!$Record.CloseDate}  
+📅 *Contract Start Date:* {!$Record.Contract_Start_Date__c}
+
+&lt;https://computing-velocity-2377.lightning.force.com//{!$Record.Id}|🎯 View Opportunity&gt;</text>
+    </textTemplates>
+</Flow>

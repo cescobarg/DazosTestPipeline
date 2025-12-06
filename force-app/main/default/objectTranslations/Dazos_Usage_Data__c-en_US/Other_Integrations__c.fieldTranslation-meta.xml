@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- List of other integrations associated with the Account. --></help>
+    <label><!-- Other Integrations --></label>
+    <name>Other_Integrations__c</name>
+    <picklistValues>
+        <masterLabel>DocuSign</masterLabel>
+        <translation><!-- DocuSign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook</masterLabel>
+        <translation><!-- Facebook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Facebook Messenger</masterLabel>
+        <translation><!-- Facebook Messenger --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FinPay</masterLabel>
+        <translation><!-- FinPay --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Keragon</masterLabel>
+        <translation><!-- Keragon --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quickbooks</masterLabel>
+        <translation><!-- Quickbooks --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recovery.com</masterLabel>
+        <translation><!-- Recovery.com --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TalkFurther</masterLabel>
+        <translation><!-- TalkFurther --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workato</masterLabel>
+        <translation><!-- Workato --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Zapier</masterLabel>
+        <translation><!-- Zapier --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

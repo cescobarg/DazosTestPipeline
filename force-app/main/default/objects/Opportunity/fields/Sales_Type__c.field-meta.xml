@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Type__c</fullName>
+    <label>Sales Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales Assisted</fullName>
+                <default>false</default>
+                <label>Sales Assisted</label>
+            </value>
+            <value>
+                <fullName>Self-Serve</fullName>
+                <default>false</default>
+                <label>Self-Serve</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

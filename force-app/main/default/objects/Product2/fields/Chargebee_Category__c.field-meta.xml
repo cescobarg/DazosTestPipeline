@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Chargebee_Category__c</fullName>
+    <label>Chargebee Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Plans</fullName>
+                <default>false</default>
+                <label>Plans</label>
+            </value>
+            <value>
+                <fullName>Addons</fullName>
+                <default>false</default>
+                <label>Addons</label>
+            </value>
+            <value>
+                <fullName>Charges</fullName>
+                <default>false</default>
+                <label>Charges</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>KIPu CRM</fullName>
+        <default>false</default>
+        <label>KIPu CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Alleva CRM</fullName>
+        <default>false</default>
+        <label>Alleva CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>ZoHo</fullName>
+        <default>false</default>
+        <label>ZoHo</label>
+    </customValue>
+    <customValue>
+        <fullName>Salesforce</fullName>
+        <default>false</default>
+        <label>Salesforce</label>
+    </customValue>
+    <customValue>
+        <fullName>Lightning Step CRM</fullName>
+        <default>false</default>
+        <label>Lightning Step CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Sunwave CRM</fullName>
+        <default>false</default>
+        <label>Sunwave CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Mondays</fullName>
+        <default>false</default>
+        <label>Mondays</label>
+    </customValue>
+    <customValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </customValue>
+    <customValue>
+        <fullName>Dazos CRM</fullName>
+        <default>false</default>
+        <label>Dazos CRM</label>
+    </customValue>
+    <customValue>
+        <fullName>Alleva CRM+</fullName>
+        <default>false</default>
+        <label>Alleva CRM+</label>
+    </customValue>
+    <customValue>
+        <fullName>Spreadsheets/None</fullName>
+        <default>false</default>
+        <label>Spreadsheets/None</label>
+    </customValue>
+    <masterLabel>Current CRM</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

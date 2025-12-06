@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of EMRs integrated with the Account. --></help>
+    <label><!-- EMRs Integrated --></label>
+    <name>EMRs_Integrated__c</name>
+    <picklistValues>
+        <masterLabel>EMR 1</masterLabel>
+        <translation><!-- EMR 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMR 2</masterLabel>
+        <translation><!-- EMR 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMR 3</masterLabel>
+        <translation><!-- EMR 3 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

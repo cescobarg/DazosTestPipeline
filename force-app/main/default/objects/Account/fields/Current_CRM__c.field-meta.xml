@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_CRM__c</fullName>
+    <label>Current CRM</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>KIPu CRM</fullName>
+                <default>false</default>
+                <label>KIPu CRM</label>
+            </value>
+            <value>
+                <fullName>Alleva CRM</fullName>
+                <default>false</default>
+                <label>Alleva CRM</label>
+            </value>
+            <value>
+                <fullName>ZoHo</fullName>
+                <default>false</default>
+                <label>ZoHo</label>
+            </value>
+            <value>
+                <fullName>Salesforce</fullName>
+                <default>false</default>
+                <label>Salesforce</label>
+            </value>
+            <value>
+                <fullName>Lightning Step CRM</fullName>
+                <default>false</default>
+                <label>Lightning Step CRM</label>
+            </value>
+            <value>
+                <fullName>Sunwave CRM</fullName>
+                <default>false</default>
+                <label>Sunwave CRM</label>
+            </value>
+            <value>
+                <fullName>Mondays</fullName>
+                <default>false</default>
+                <label>Mondays</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Dazos CRM</fullName>
+                <default>false</default>
+                <label>Dazos CRM</label>
+            </value>
+            <value>
+                <fullName>Alleva CRM+</fullName>
+                <default>false</default>
+                <label>Alleva CRM+</label>
+            </value>
+            <value>
+                <fullName>Spreadsheets/None</fullName>
+                <default>false</default>
+                <label>Spreadsheets/None</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

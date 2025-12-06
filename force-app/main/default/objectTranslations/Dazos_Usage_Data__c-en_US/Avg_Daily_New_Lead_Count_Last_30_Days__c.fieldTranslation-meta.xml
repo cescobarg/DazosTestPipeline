@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Average number of new Leads created per day over the last 30 days for this Account. --></help>
+    <label><!-- Avg Daily New Lead Count Last 30 Days --></label>
+    <name>Avg_Daily_New_Lead_Count_Last_30_Days__c</name>
+</CustomFieldTranslation>

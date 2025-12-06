@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Integrations__c</fullName>
+    <description>List of other integrations associated with the Account.</description>
+    <inlineHelpText>List of other integrations associated with the Account.</inlineHelpText>
+    <label>Other Integrations</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DocuSign</fullName>
+                <default>false</default>
+                <label>DocuSign</label>
+            </value>
+            <value>
+                <fullName>Zapier</fullName>
+                <default>false</default>
+                <label>Zapier</label>
+            </value>
+            <value>
+                <fullName>Facebook</fullName>
+                <default>false</default>
+                <label>Facebook</label>
+            </value>
+            <value>
+                <fullName>FinPay</fullName>
+                <default>false</default>
+                <label>FinPay</label>
+            </value>
+            <value>
+                <fullName>Keragon</fullName>
+                <default>false</default>
+                <label>Keragon</label>
+            </value>
+            <value>
+                <fullName>Workato</fullName>
+                <default>false</default>
+                <label>Workato</label>
+            </value>
+            <value>
+                <fullName>Recovery.com</fullName>
+                <default>false</default>
+                <label>Recovery.com</label>
+            </value>
+            <value>
+                <fullName>TalkFurther</fullName>
+                <default>false</default>
+                <label>TalkFurther</label>
+            </value>
+            <value>
+                <fullName>Quickbooks</fullName>
+                <default>false</default>
+                <label>Quickbooks</label>
+            </value>
+            <value>
+                <fullName>Facebook Messenger</fullName>
+                <default>false</default>
+                <label>Facebook Messenger</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

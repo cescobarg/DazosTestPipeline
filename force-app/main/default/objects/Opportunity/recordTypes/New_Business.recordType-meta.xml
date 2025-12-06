@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Business</fullName>
+    <active>true</active>
+    <businessProcess>New Business</businessProcess>
+    <description>A New Business record represents a first-time sale or opportunity with a new customer. It typically involves initial prospecting, qualification, and closing of the first deal.</description>
+    <label>New Business</label>
+    <picklistValues>
+        <picklist>Auto_Renew__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Company__c</picklist>
+        <values>
+            <fullName>Aftermath Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Aspire MB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CA Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compass Revenue Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Pro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Element MB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hansei</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interface Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Keystone Medical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MD Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mt Yonah</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nextus Billing Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prosperity BH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SJ Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United Billing Solutions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Billing_Software__c</picklist>
+        <values>
+            <fullName>Advanced MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alleva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Avea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CMD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lightning Step</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Care_Type__c</picklist>
+        <values>
+            <fullName>Inpatient</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outpatient</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitor_Lost_to__c</picklist>
+        <values>
+            <fullName>Axiom</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Behave Health</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FiveCRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>HubSpot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kipu CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LeadSquared</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leads360</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LightningStep</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Resilience</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sugar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunwave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Supportable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Zoho</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Competitors__c</picklist>
+        <values>
+            <fullName>Hubspot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kipu CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SalesForce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_CRM__c</picklist>
+        <values>
+            <fullName>Alleva CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alleva CRM%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dazos CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIPu CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lightning Step CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mondays</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spreadsheets%2FNone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunwave CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZoHo</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_EMR__c</picklist>
+        <values>
+            <fullName>Alleva EMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BestNotes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIPu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lightning Step</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medical Mime</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunwave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown or No EMR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ZenCharts</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_VOIP__c</picklist>
+        <values>
+            <fullName>5nine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>8x8</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CTM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Rail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dial PAD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ring Central</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SpruceHealth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Deal_Tier__c</picklist>
+        <values>
+            <fullName>Tier 1 %28Best Case%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 4 %28Hail Mary%29</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Implementation_Check__c</picklist>
+        <values>
+            <fullName>Confirmed %E2%80%93 No Integrations or Data Migration Required</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Data Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Confirmed Integrations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Review for Both</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Confirmed</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Implemention_Discussed_with_customer__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Integrations_Needed__c</picklist>
+        <values>
+            <fullName>Advanced MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alleva</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Best Notes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>KIPU</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lightning Step</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>My Avatar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RETHINK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ritten</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sunwave</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Invoice_Period__c</picklist>
+        <values>
+            <fullName>Annually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biannually</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quarterly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Type__c</picklist>
+        <values>
+            <fullName>Affiliate%2FReferral Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bought Leads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Success</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dazos Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dazos Sales Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Form Fill</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>iVerify Signup</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Levels_of_Care__c</picklist>
+        <values>
+            <fullName>Placeholder 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placeholder 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Placeholder 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Loss_Reason__c</picklist>
+        <values>
+            <fullName>EMR Integration Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Crucial Features</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Decision %2F Non-Responsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not User Friendly %2F Too Difficult</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Worth It</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Bugs or Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Expensive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Network_Status__c</picklist>
+        <values>
+            <fullName>In Network</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Out of Network</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Method__c</picklist>
+        <values>
+            <fullName>ACH</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Check</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Credit Card</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payment_Period__c</picklist>
+        <values>
+            <fullName>NET 15</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET 30</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET 45</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET 60</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NET 90</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Due Upon Receipt</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>RevOps_Review_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denied</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted for Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk_Level__c</picklist>
+        <values>
+            <fullName>Red</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yellow</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk_Reason__c</picklist>
+        <values>
+            <fullName>Bugs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Debooked %28not sold%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disengaged</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial e%2Eg%2E Acquisition %2F Downturn %2F No Budget %2F Lost Funding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of Product Adoption</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lack of ROI</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Champion %2F New Leadership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding Issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Poor Support</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product %2F Feature Gap</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sales_Type__c</picklist>
+        <values>
+            <fullName>Sales Assisted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Self-Serve</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Teams_Using_Dazos__c</picklist>
+        <values>
+            <fullName>Admissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Alumni</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Billing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Center Only</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development or Donations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VOB</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Existing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Which_Competitor__c</picklist>
+        <values>
+            <fullName>HubSpot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kipu CRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Salesforce</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

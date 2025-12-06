@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Implementation_Check__c</fullName>
+    <description>Confirms that the customer does not require any integrations or data migration before implementation.</description>
+    <inlineHelpText>Confirms that the customer does not require any integrations or data migration before implementation.</inlineHelpText>
+    <label>Implementation Check</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Confirmed</fullName>
+                <default>true</default>
+                <label>Not Confirmed</label>
+            </value>
+            <value>
+                <fullName>Confirmed – No Integrations or Data Migration Required</fullName>
+                <default>false</default>
+                <label>Confirmed – No Integrations or Data Migration Required</label>
+            </value>
+            <value>
+                <fullName>Needs Review for Both</fullName>
+                <default>false</default>
+                <label>Needs Review for Both</label>
+            </value>
+            <value>
+                <fullName>Confirmed Integrations</fullName>
+                <default>false</default>
+                <label>Confirmed Integrations</label>
+            </value>
+            <value>
+                <fullName>Confirmed Data Migration</fullName>
+                <default>false</default>
+                <label>Confirmed Data Migration</label>
+            </value>
+            <value>
+                <fullName>Confirmed Integrations; Needs Review of Data Migration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Confirmed Integrations; Needs Review of Data Migration</label>
+            </value>
+            <value>
+                <fullName>Needs Review for Integrations; Confirmed Data Migration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Needs Review for Integrations; Confirmed Data Migration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

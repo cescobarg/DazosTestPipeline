@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Reason__c</fullName>
+    <label>Risk Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product / Feature Gap</fullName>
+                <default>false</default>
+                <label>Product / Feature Gap</label>
+            </value>
+            <value>
+                <fullName>Bugs</fullName>
+                <default>false</default>
+                <label>Bugs</label>
+            </value>
+            <value>
+                <fullName>Poor Support</fullName>
+                <default>false</default>
+                <label>Poor Support</label>
+            </value>
+            <value>
+                <fullName>Lack of Product Adoption</fullName>
+                <default>false</default>
+                <label>Lack of Product Adoption</label>
+            </value>
+            <value>
+                <fullName>Lack of ROI</fullName>
+                <default>false</default>
+                <label>Lack of ROI</label>
+            </value>
+            <value>
+                <fullName>Financial e.g. Acquisition / Downturn / No Budget / Lost Funding</fullName>
+                <default>false</default>
+                <label>Financial e.g. Acquisition / Downturn / No Budget / Lost Funding</label>
+            </value>
+            <value>
+                <fullName>Onboarding Issues</fullName>
+                <default>false</default>
+                <label>Onboarding Issues</label>
+            </value>
+            <value>
+                <fullName>Lost Champion / New Leadership</fullName>
+                <default>false</default>
+                <label>Lost Champion / New Leadership</label>
+            </value>
+            <value>
+                <fullName>Debooked (not sold)</fullName>
+                <default>false</default>
+                <label>Debooked (not sold)</label>
+            </value>
+            <value>
+                <fullName>Disengaged</fullName>
+                <default>false</default>
+                <label>Disengaged</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

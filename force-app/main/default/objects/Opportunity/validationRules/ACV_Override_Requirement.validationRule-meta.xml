@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACV_Override_Requirement</fullName>
+    <active>false</active>
+    <description>In order to override/edit the ACV amount both the Override Checkbox and Override reason must be populated.</description>
+    <errorConditionFormula>AND(
+ ISCHANGED(ACV__c),    
+ ACV__c &lt;&gt; PRIORVALUE(ACV__c),
+ ISBLANK(ACV_Override_Reason__c),
+ NOT(ISBLANK( SyncedQuoteId ))
+)</errorConditionFormula>
+    <errorMessage>ACV Override Reason required to change ACV amount when Quote is synced.</errorMessage>
+</ValidationRule>

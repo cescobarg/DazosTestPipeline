@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Dazos_Team_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISCHANGED(StageName),
+  ISPICKVAL(StageName, &quot;Demo &amp; Solutioning&quot;),
+OR(
+  ISBLANK( TEXT( Teams_Using_Dazos__c ))))</errorConditionFormula>
+    <errorDisplayField>Teams_Using_Dazos__c</errorDisplayField>
+    <errorMessage>Please add details for Teams Using Dazos</errorMessage>
+</ValidationRule>

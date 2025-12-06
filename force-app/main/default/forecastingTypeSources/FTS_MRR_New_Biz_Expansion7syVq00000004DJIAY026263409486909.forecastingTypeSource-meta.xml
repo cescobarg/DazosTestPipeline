@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingTypeSource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <forecastingSourceDefinition>FSD_Opportunity388638752584474</forecastingSourceDefinition>
+    <forecastingType>MRR_New_Biz_Expansion</forecastingType>
+    <isProtected>false</isProtected>
+    <masterLabel>FTS_MRR_New_Biz_Expansion7syVq00000004DJIAY026263409486909</masterLabel>
+    <sourceGroup>1</sourceGroup>
+</ForecastingTypeSource>

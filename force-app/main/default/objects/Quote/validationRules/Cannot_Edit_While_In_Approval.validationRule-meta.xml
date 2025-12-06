@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cannot_Edit_While_In_Approval</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(ISNEW()) &amp;&amp;
+OR(
+    ISPICKVAL(Approval_Status__c, &quot;Pending Proposal Approval&quot;)
+) &amp;&amp;
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; &amp;&amp;
+NOT(ISCHANGED( Bypass_Flow__c ))</errorConditionFormula>
+    <errorMessage>You cannot edit a Quote that&apos;s pending approval.</errorMessage>
+</ValidationRule>

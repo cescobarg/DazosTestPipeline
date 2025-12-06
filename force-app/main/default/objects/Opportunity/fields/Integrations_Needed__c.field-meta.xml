@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integrations_Needed__c</fullName>
+    <label>Integrations Needed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>KIPU</fullName>
+                <default>false</default>
+                <label>KIPU</label>
+            </value>
+            <value>
+                <fullName>Alleva</fullName>
+                <default>false</default>
+                <label>Alleva</label>
+            </value>
+            <value>
+                <fullName>Opus</fullName>
+                <default>false</default>
+                <label>Opus</label>
+            </value>
+            <value>
+                <fullName>Best Notes</fullName>
+                <default>false</default>
+                <label>Best Notes</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Sunwave</fullName>
+                <default>false</default>
+                <label>Sunwave</label>
+            </value>
+            <value>
+                <fullName>Lightning Step</fullName>
+                <default>false</default>
+                <label>Lightning Step</label>
+            </value>
+            <value>
+                <fullName>Ritten</fullName>
+                <default>false</default>
+                <label>Ritten</label>
+            </value>
+            <value>
+                <fullName>RETHINK</fullName>
+                <default>false</default>
+                <label>RETHINK</label>
+            </value>
+            <value>
+                <fullName>Advanced MD</fullName>
+                <default>false</default>
+                <label>Advanced MD</label>
+            </value>
+            <value>
+                <fullName>My Avatar</fullName>
+                <default>false</default>
+                <label>My Avatar</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

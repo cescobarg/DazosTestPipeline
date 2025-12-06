@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Closed_Won_Message</name>
+        <label>Closed Won Message</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>slackPostMessage</actionName>
+        <actionType>slackPostMessage</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>slackAppIdForToken</name>
+            <value>
+                <stringValue>A028VJ1KG3G</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackWorkspaceIdForToken</name>
+            <value>
+                <stringValue>T02MSM2MS90</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackConversationId</name>
+            <value>
+                <stringValue>C09KYKZ7C20</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>slackMessage</name>
+            <value>
+                <elementReference>WinAlert</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>slackPostMessage</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <environments>Default</environments>
+    <interviewLabel>Opportunity: Slack - Closed Won {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity: Slack - Closed Won</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>1 AND 4 AND (2 OR 3)</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>012fi000000880QAAQ</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>012fi000000880PAAQ</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>AccountId</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue>001Vq00000VwF8AIAV</stringValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <scheduledPaths>
+            <connector>
+                <targetReference>Closed_Won_Message</targetReference>
+            </connector>
+            <pathType>AsyncAfterCommit</pathType>
+        </scheduledPaths>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>WinAlert</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>🎉 We just closed an opportunity!
+
+📋 *Opportunity:* {!$Record.Name}
+💰 *ACV:* ${!$Record.ACV__c}
+💵 *MRR:* ${!$Record.MRR__c}
+🙌 *Closed By:* {!$Record.Owner.FirstName} {!$Record.Owner.LastName}
+📅 *Close Date:* {!$Record.CloseDate}
+🗓 *Contract Start Date:* {!$Record.Contract_Start_Date__c}
+
+🔗 &lt;https://computing-velocity-2377.lightning.force.com/{!$Record.Id}|View Opportunity&gt;</text>
+    </textTemplates>
+</Flow>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IncidentMgmtSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableAiKnowledgeCreation>false</enableAiKnowledgeCreation>
+    <enableAutoClosureOfChildIncident>false</enableAutoClosureOfChildIncident>
+    <enableAutoCreationOfProblem>false</enableAutoCreationOfProblem>
+    <enableChangePriorityMatrix>false</enableChangePriorityMatrix>
+    <enableChangePriorityOverride>false</enableChangePriorityOverride>
+    <enableChangeRequestValidations>false</enableChangeRequestValidations>
+    <enableChatToIncidentAi>false</enableChatToIncidentAi>
+    <enableCnfgItemCopyForRecords>false</enableCnfgItemCopyForRecords>
+    <enableDedupE2IncidentAttachment>false</enableDedupE2IncidentAttachment>
+    <enableEmailToIncident>false</enableEmailToIncident>
+    <enableEmailToIncidentAi>false</enableEmailToIncidentAi>
+    <enableITSMChangeMgmt>false</enableITSMChangeMgmt>
+    <enableITSMIncidentMgmt>false</enableITSMIncidentMgmt>
+    <enableITSMMajorIncParent>false</enableITSMMajorIncParent>
+    <enableITSMProblemMgmt>false</enableITSMProblemMgmt>
+    <enableIncPriorityMatrix>false</enableIncPriorityMatrix>
+    <enableIncPriorityOverride>false</enableIncPriorityOverride>
+    <enableIncidentValidations>false</enableIncidentValidations>
+    <enableProbPriorityMatrix>false</enableProbPriorityMatrix>
+    <enableProbPriorityOverride>false</enableProbPriorityOverride>
+    <enableProblemValidations>false</enableProblemValidations>
+    <enableRiskAssessment>false</enableRiskAssessment>
+    <enableSaveE2IncidentAttachment>false</enableSaveE2IncidentAttachment>
+</IncidentMgmtSettings>

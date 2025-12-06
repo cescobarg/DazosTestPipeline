@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Number of integrated email campaigns associated with the Account. --></help>
+    <label><!-- Integrated Email Campaigns --></label>
+    <name>Integrated_Email_Campaigns__c</name>
+    <picklistValues>
+        <masterLabel>Constant Contact</masterLabel>
+        <translation><!-- Constant Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hubspot</masterLabel>
+        <translation><!-- Hubspot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MailChimp</masterLabel>
+        <translation><!-- MailChimp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iCampaign</masterLabel>
+        <translation><!-- iCampaign --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>cb0x__Async_Job_In_Progress__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>This field is used to prevent Async Update Loop and is populated by the quote sync utility</description>
+    <label>Async Job In Progress</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

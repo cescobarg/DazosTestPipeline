@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nurture_Reason__c</fullName>
+    <label>Nurture Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AE Follow Up</fullName>
+                <default>false</default>
+                <label>AE Follow Up</label>
+            </value>
+            <value>
+                <fullName>Budget</fullName>
+                <default>false</default>
+                <label>Budget</label>
+            </value>
+            <value>
+                <fullName>Competition</fullName>
+                <default>false</default>
+                <label>Competition</label>
+            </value>
+            <value>
+                <fullName>Complicance</fullName>
+                <default>false</default>
+                <label>Complicance</label>
+            </value>
+            <value>
+                <fullName>Went Cold/Stale</fullName>
+                <default>false</default>
+                <label>Went Cold/Stale</label>
+            </value>
+            <value>
+                <fullName>Poor Timing</fullName>
+                <default>false</default>
+                <label>Poor Timing</label>
+            </value>
+            <value>
+                <fullName>Product Fit</fullName>
+                <default>false</default>
+                <label>Product Fit</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

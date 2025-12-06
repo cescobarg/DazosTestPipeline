@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Period__c</fullName>
+    <description>Time frame for Customer to pay invoices</description>
+    <inlineHelpText>Payment is due X days after the invoice date.</inlineHelpText>
+    <label>Payment Period</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Payment Due Upon Receipt</fullName>
+                <default>false</default>
+                <label>Payment Due Upon Receipt</label>
+            </value>
+            <value>
+                <fullName>NET 15</fullName>
+                <default>false</default>
+                <label>NET 15</label>
+            </value>
+            <value>
+                <fullName>NET 30</fullName>
+                <default>false</default>
+                <label>NET 30</label>
+            </value>
+            <value>
+                <fullName>NET 45</fullName>
+                <default>false</default>
+                <label>NET 45</label>
+            </value>
+            <value>
+                <fullName>NET 60</fullName>
+                <default>false</default>
+                <label>NET 60</label>
+            </value>
+            <value>
+                <fullName>NET 90</fullName>
+                <default>false</default>
+                <label>NET 90</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Qualification_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+  ISCHANGED(StageName),
+  ISPICKVAL(StageName, &quot;Pricing &amp; Negotiation&quot;),
+OR(
+  ISBLANK( TEXT(Current_CRM__c)),
+  ISBLANK( TEXT( Current_EMR__c)),
+  ISBLANK( TEXT( Current_VOIP__c ))))</errorConditionFormula>
+    <errorMessage>Please add Current EMR, CRM And VOIP</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewalable_Line__c</fullName>
+    <formula>End_Date__c =  Quote.Contract_End_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Lines that terminate on the contract end date will be included in the renewal.</inlineHelpText>
+    <label>Renewable Line</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
