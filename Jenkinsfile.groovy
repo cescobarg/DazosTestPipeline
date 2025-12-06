@@ -16,23 +16,15 @@ node {
 
             // Authorize sandbox org
             stage('Authorize Sandbox') {
-                rc = bat(returnStatus: true, script: "\"${toolbelt}/sf\" org login jwt --instance-url ${SF_INSTANCE_URL} --client-id ${env.SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwt-key-file ${server_key_file} --set-default --alias Dazos_Sandbox")
+                rc = bat(returnStatus: true, script: "\"${toolbelt}/sf\" org login jwt --instance-url ${SF_INSTANCE_URL} --client-id ${env.SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwt-key-file ${server_key_file} --set-default --alias SandboxOrg")
                 if (rc != 0) {
                     error 'Salesforce sandbox org authorization failed.'
                 }
             }
 
-            // Deploy source to sandbox
-            stage('Deploy to Sandbox') {
-                rc = bat(returnStatus: true, script: "\"${toolbelt}/sf\" project deploy start --target-org Dazos_Sandbox")
-                if (rc != 0) {
-                    error 'Deployment to sandbox failed.'
-                }
-            }
-
-            // Run unit tests in sandbox
+            // Run unit tests only (no deployment)
             stage('Run Tests in Sandbox') {
-                rc = bat(returnStatus: true, script: "\"${toolbelt}/sf\" apex run test --target-org Dazos_Sandbox --wait 10 --result-format tap --code-coverage --test-level ${TEST_LEVEL}")
+                rc = bat(returnStatus: true, script: "\"${toolbelt}/sf\" apex run test --target-org SandboxOrg --wait 10 --result-format tap --code-coverage --test-level ${TEST_LEVEL}")
                 if (rc != 0) {
                     error 'Unit tests in sandbox failed.'
                 }
@@ -40,4 +32,3 @@ node {
         }
     }
 }
-
