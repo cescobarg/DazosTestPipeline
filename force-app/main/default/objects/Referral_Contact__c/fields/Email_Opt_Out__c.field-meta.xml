@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Shows whether this contact prefers not to receive emails.</description>
+    <inlineHelpText>Shows whether this contact prefers not to receive emails.</inlineHelpText>
+    <label>Email Opt Out</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

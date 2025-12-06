@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Integrations__c</fullName>
+    <description>List of payment integrations associated with the Account.</description>
+    <inlineHelpText>List of payment integrations associated with the Account.</inlineHelpText>
+    <label>Payment Integrations</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Authorize.net</fullName>
+                <default>false</default>
+                <label>Authorize.net</label>
+            </value>
+            <value>
+                <fullName>QBMS</fullName>
+                <default>false</default>
+                <label>QBMS</label>
+            </value>
+            <value>
+                <fullName>Stripe</fullName>
+                <default>false</default>
+                <label>Stripe</label>
+            </value>
+            <value>
+                <fullName>Square</fullName>
+                <default>false</default>
+                <label>Square</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>
