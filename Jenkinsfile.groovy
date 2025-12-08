@@ -11,7 +11,7 @@ node {
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
     def toolbelt = tool 'toolbelt'
 
-    def branchName = env.BRANCH_NAME ?: 'QA'
+    def branchName = env.BRANCH_NAME ?: 'local'
 
     stage('Checkout Source') {
         checkout scm
@@ -83,12 +83,12 @@ def qaFlow(toolbelt) {
     }
 
     stage('Deploy to QA Sandbox') {
-        def rc = command "\"${toolbelt}/sf\" project deploy start --target-org QA_Sandbox_Alias"
+        def rc = command "\"${toolbelt}/sf\" project deploy start --target-org DazosScratch"
         if (rc != 0) error 'Deployment to QA failed.'
     }
 
     stage('Run Tests in QA') {
-        def rc = command "\"${toolbelt}/sf\" apex run test --target-org QA_Sandbox_Alias --wait 10 --result-format tap --code-coverage --test-level RunLocalTests"
+        def rc = command "\"${toolbelt}/sf\" apex run test --target-org DazosScratch --wait 10 --result-format tap --code-coverage --test-level RunLocalTests"
         if (rc != 0) error 'QA tests failed.'
     }
 }
