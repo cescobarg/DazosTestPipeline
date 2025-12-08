@@ -83,12 +83,12 @@ def qaFlow(toolbelt) {
     }
 
     stage('Deploy to QA Sandbox') {
-        def rc = command "\"${toolbelt}/sf\" project deploy start --target-org DazosScratch"
+        def rc = command "\"${toolbelt}/sf\" project deploy start --target-org Dazos_DevHub"
         if (rc != 0) error 'Deployment to QA failed.'
     }
 
     stage('Run Tests in QA') {
-        def rc = command "\"${toolbelt}/sf\" apex run test --target-org DazosScratch --wait 10 --result-format tap --code-coverage --test-level RunLocalTests"
+        def rc = command "\"${toolbelt}/sf\" apex run test --target-org Dazos_DevHub --wait 10 --result-format tap --code-coverage --test-level RunLocalTests"
         if (rc != 0) error 'QA tests failed.'
     }
 }
