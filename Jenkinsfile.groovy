@@ -11,7 +11,7 @@ node {
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
     def toolbelt = tool 'toolbelt'
 
-    def branchName = env.BRANCH_NAME ?: 'QA'
+    def branchName = env.BRANCH_NAME ?: 'Prod'
 
     stage('Checkout Source') {
         checkout scm
@@ -100,12 +100,12 @@ def stagingFlow(toolbelt) {
     scratchOrgFlow(toolbelt) // create scratch org, deploy, run tests, delete
 
     stage('Deploy to Full Sandbox') {
-        def rc = command "\"${toolbelt}/sf\" project deploy start --target-org Full_Sandbox_Alias"
+        def rc = command "\"${toolbelt}/sf\" project deploy start --target-org Dazos_DevHub"
         if (rc != 0) error 'Deployment to Full Sandbox failed.'
     }
 
     stage('Run Complete Test Suite in Full') {
-        def rc = command "\"${toolbelt}/sf\" apex run test --target-org Full_Sandbox_Alias --wait 30 --result-format tap --code-coverage --test-level RunAllTestsInOrg"
+        def rc = command "\"${toolbelt}/sf\" apex run test --target-org Dazos_DevHub --wait 30 --result-format tap --code-coverage --test-level RunAllTestsInOrg"
         if (rc != 0) error 'Full sandbox tests failed.'
     }
 }
